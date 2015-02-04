@@ -13,7 +13,7 @@ In-Memory Cache with O(1) Operations and LRU Purging Strategy
 About
 -----
 
-Cache-LRU is a small JavaScript library, providing an in-memory
+Cache-LRU is a very small JavaScript library, providing an in-memory
 key-indexed object cache data structure with Least-Recently-Used (LRU)
 object purging strategy and main operations which all have strict O(1), i.e.,
 constant and hence independent of the number of cached objects, time
