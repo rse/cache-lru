@@ -109,9 +109,15 @@ export default class CacheLRU {
 
     /*  get value under key  */
     get (key) {
-        let val = this.peek(key)
-        this.touch(key)
-        return val
+        let bucket = this._index[key]
+        if (bucket === undefined)
+            return undefined
+        if (bucket.expires < Date.now()) {
+            this.del(bucket.key)
+            return undefined
+        }
+        this._promote(bucket)
+        return bucket.val
     }
 
     /*  set value under key  */
