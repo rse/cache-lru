@@ -25,13 +25,13 @@ Installation
 #### Node environments (with NPM package manager):
 
 ```shell
-$ npm install asty
+$ npm install cache-lru
 ```
 
 #### Browser environments (with Bower package manager):
 
 ```shell
-$ bower install asty
+$ bower install cache-lru
 ```
 
 Usage
