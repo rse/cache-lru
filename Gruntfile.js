@@ -35,7 +35,7 @@ module.exports = function (grunt) {
                 jshintrc: "jshint.json"
             },
             "gruntfile":  [ "Gruntfile.js" ],
-            "asty": [ "src/**/*.js" ]
+            "cache-lru": [ "src/**/*.js" ]
         },
         browserify: {
             "cache-lru": {
