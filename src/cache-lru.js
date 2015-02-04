@@ -101,8 +101,9 @@ export default class CacheLRU {
     /*  explicity promote item under key  */
     touch (key) {
         let bucket = this._index[key]
-        if (bucket !== undefined)
-            this._promote(bucket)
+        if (bucket === undefined)
+            throw new Error("touch: no such item")
+        this._promote(bucket)
         return this
     }
 
@@ -147,7 +148,7 @@ export default class CacheLRU {
     del (key) {
         let bucket = this._index[key]
         if (bucket === undefined)
-            throw new Error("ASTQ::Cache#del: no such item")
+            throw new Error("del: no such item")
         delete this._index[key]
         this._detach(bucket)
         this._cur--
