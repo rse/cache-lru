@@ -92,11 +92,10 @@ Usage
   Delete object under `key`.
   If no object exists under `key` an exception is thrown.
 
-- `CacheLRU#clear(key: String): CacheLRU`: [O(1)]<br/>
-  Delete object under `key`.
-  If no object exists under `key` an exception is thrown.
-
 ### Convenience Operations
+
+- `CacheLRU#clear(): CacheLRU`: [O(n)]<br/>
+  Delete all objects in the cache.
 
 - `CacheLRU#keys(): String[]`: [O(n)]<br/>
   Get the list of keys of all objects in the cache, in MRU to LRU order.
