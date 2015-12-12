@@ -43,7 +43,7 @@ module.exports = function (grunt) {
                     "lib/cache-lru.js": [ "src/**/*.js" ]
                 },
                 options: {
-                    transform: [ "babelify" ],
+                    transform: [ [ "babelify", { presets: [ "es2015" ] } ] ],
                     plugin: [
                         [ "minifyify" ],
                         [ "browserify-derequire" ],
