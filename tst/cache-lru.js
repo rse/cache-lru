@@ -22,7 +22,7 @@
 **  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-var CacheLRU = require("../lib/cache-lru.js");
+var CacheLRU = require("../lib/cache-lru.js")
 
 describe("Cache-LRU Library", function () {
     it("should expose the official API", function () {

@@ -22,7 +22,7 @@
 **  SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
 
-export default class CacheLRU {
+class CacheLRU {
     /*  create LRU cache instance  */
     constructor () {
         this._index     = {}
@@ -198,4 +198,6 @@ export default class CacheLRU {
         bucket.older.newer = bucket
     }
 }
+
+module.exports = CacheLRU
 
