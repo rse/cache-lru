@@ -113,7 +113,7 @@ Implementation Notice
 ---------------------
 
 Although Cache-LRU is written in ECMAScript 6, it is transpiled to ECMAScript
-5 and this way runs in really all(!) current (as of 2015) JavaScript
+5 and this way runs in really all(!) current (as of 2016) JavaScript
 environments, of course.
 
 Internally, Cache-LRU is based on a managing all objects in a two-headed
@@ -124,7 +124,7 @@ happening LRU purging functionality.
 License
 -------
 
-Copyright (c) 2015 Ralf S. Engelschall (http://engelschall.com/)
+Copyright (c) 2015-2016 Ralf S. Engelschall (http://engelschall.com/)
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the
