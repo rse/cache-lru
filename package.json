@@ -1,6 +1,6 @@
 {
     "name":        "cache-lru",
-    "version":     "1.0.15",
+    "version":     "1.0.16",
     "description": "In-Memory Cache with O(1) Operations and LRU Purging Strategy",
     "keywords":    [ "cache", "lru" ],
     "main":        "lib/cache-lru.js",
