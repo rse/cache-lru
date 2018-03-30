@@ -22,16 +22,8 @@ complexity (including the internal LRU purging functionality).
 Installation
 ------------
 
-#### Node environments (with NPM package manager):
-
 ```shell
 $ npm install cache-lru
-```
-
-#### Browser environments (with Bower package manager):
-
-```shell
-$ bower install cache-lru
 ```
 
 Usage
