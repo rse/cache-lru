@@ -37,10 +37,10 @@
         "chai":                   "4.1.2",
         "babelify":               "8.0.0",
         "babel-core":             "6.26.3",
-        "babel-preset-env":       "1.6.1",
+        "babel-preset-env":       "1.7.0",
         "uglifyify":              "5.0.0",
-        "browserify-header":      "0.9.2",
-        "browserify-derequire":   "0.9.4"
+        "browserify-header":      "0.9.4",
+        "browserify-derequire":   "0.9.6"
     },
     "scripts": {
         "prepublishOnly":  "grunt default",
