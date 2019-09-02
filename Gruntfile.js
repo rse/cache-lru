@@ -30,11 +30,12 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks("grunt-eslint")
 
     grunt.initConfig({
+        /* eslint quote-props: off */
         eslint: {
             options: {
                 configFile: "eslint.yaml"
             },
-            "gruntfile":  [ "Gruntfile.js" ],
+            "gruntfile": [ "Gruntfile.js" ],
             "cache-lru": [ "src/**/*.js" ]
         },
         browserify: {
