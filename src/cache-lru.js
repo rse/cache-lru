@@ -38,7 +38,7 @@ class CacheLRU {
 
     /*  get or set the cache limit  */
     limit (max) {
-        let maxOld = this._max
+        const maxOld = this._max
         if (arguments.length > 0) {
             this._max = max
             this._purge()
@@ -82,13 +82,13 @@ class CacheLRU {
 
     /*  check whether item exists under key  */
     has (key) {
-        let bucket = this._index[key]
+        const bucket = this._index[key]
         return (bucket !== undefined && bucket.expires >= Date.now())
     }
 
     /*  get value under key without promoting item  */
     peek (key) {
-        let bucket = this._index[key]
+        const bucket = this._index[key]
         if (bucket === undefined)
             return undefined
         if (bucket.expires < Date.now()) {
@@ -100,7 +100,7 @@ class CacheLRU {
 
     /*  explicity promote item under key  */
     touch (key) {
-        let bucket = this._index[key]
+        const bucket = this._index[key]
         if (bucket === undefined)
             throw new Error("touch: no such item")
         this._promote(bucket)
@@ -109,7 +109,7 @@ class CacheLRU {
 
     /*  get value under key  */
     get (key) {
-        let bucket = this._index[key]
+        const bucket = this._index[key]
         if (bucket === undefined)
             return undefined
         if (bucket.expires < Date.now()) {
@@ -142,7 +142,7 @@ class CacheLRU {
         }
         else {
             /*  replace existing bucket  */
-            let valOld = bucket.val
+            const valOld = bucket.val
             bucket.val = val
             this._promote(bucket)
             this._dispose.call(undefined, bucket.key, valOld, "set")
@@ -152,7 +152,7 @@ class CacheLRU {
 
     /*  delete item under key  */
     del (key) {
-        let bucket = this._index[key]
+        const bucket = this._index[key]
         if (bucket === undefined)
             throw new Error("del: no such item")
         delete this._index[key]
