@@ -83,7 +83,7 @@ class CacheLRU {
     /*  check whether item exists under key  */
     has (key) {
         let bucket = this._index[key]
-        return bucket !== undefined && bucket.expires >= Date.now()
+        return (bucket !== undefined && bucket.expires >= Date.now())
     }
 
     /*  get value under key without promoting item  */
